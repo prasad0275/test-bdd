@@ -1,0 +1,16 @@
+
+Scenario Outline: Login Test1
+    Given user is on the login page
+    When user enters username "<username>" and password "<password>" and click login
+    Then verify the login process
+    And close the browser
+    
+Examples:
+    | username | password |
+    | standard_user | secret_sauce |
+    | locked_out_user | secret_sauce |
+    | problem_user | secret_sauce |
+    | performance_glitch_user | secret_sauce |
+    | error_user | secret_sauce |
+    | visual_user | secret_sauce |
+
