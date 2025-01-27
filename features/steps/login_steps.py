@@ -8,7 +8,7 @@ import time
 def step_impl(context):
     options = Options()
     options.add_argument('--headless=new')
-    context.driver = Chrome(options=options)
+    context.driver = Chrome()
     context.driver.get("https://www.saucedemo.com/")
 
 
