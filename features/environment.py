@@ -8,9 +8,10 @@ from email import encoders
 
 
 def before_all(context):
-    files = os.listdir("./reports")
-    for file in files:
-        os.remove("./reports/"+file)
+    pass
+    # files = os.listdir("./reports")
+    # for file in files:
+    #     os.remove("./reports/"+file)
     # # os.rmdir("./reports")
     # # if not os.path.exists("./reports"):
     # #     os.mkdir("./reports")
