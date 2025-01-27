@@ -8,7 +8,7 @@ import time
 def step_impl(context):
     options = Options()
     options.add_argument('--headless=new')
-    context.driver = Chrome()
+    context.driver = Chrome(options=options) # always run tests in headless mode for ci cd workflow
     context.driver.get("https://www.saucedemo.com/")
 
 

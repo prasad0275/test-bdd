@@ -9,9 +9,11 @@ from email import encoders
 
 def before_all(context):
     pass
-    # files = os.listdir("./reports")
-    # for file in files:
-    #     os.remove("./reports/"+file)
+    files = os.listdir("./reports")
+    for file in files:
+        if file in "report.txt":
+            continue
+        os.remove("./reports/"+file)
     # # os.rmdir("./reports")
     # # if not os.path.exists("./reports"):
     # #     os.mkdir("./reports")
@@ -19,20 +21,20 @@ def before_all(context):
 
 def after_all(context):
     print("Suite ended")
-    # try:    
-    #     # subprocess.run("set path=D:\\Softwares\\allure-2.32.0\\bin", shell=True)
-    #     subprocess.run("/opt/allure/allure-2.15.0/bin/allure generate --single-file --clean ./reports", shell=True, check=True)
-    #     print("Allure report generated successfully!")
+    try:    
+        # subprocess.run("set path=D:\\Softwares\\allure-2.32.0\\bin", shell=True)
+        subprocess.run("/opt/allure/allure-2.15.0/bin/allure generate --single-file --clean ./reports", shell=True, check=True)
+        print("Allure report generated successfully!")
             
-    #     # Example usage
-    #     send_email_with_attachment(
-    #         "Testing BDD",
-    #         "This is the body of the email.",
-    #         "sawant.prasad0275@gmail.com",
-    #         "./allure-report/index.html"
-    #     )
-    # except subprocess.CalledProcessError as e:
-    #     print(f"Error generating Allure report: {e}")
+        # Example usage
+        send_email_with_attachment(
+            "Testing BDD",
+            "This is the body of the email.",
+            "sawant.prasad0275@gmail.com",
+            "./allure-report/index.html"
+        )
+    except subprocess.CalledProcessError as e:
+        print(f"Error generating Allure report: {e}")
        
     
     
