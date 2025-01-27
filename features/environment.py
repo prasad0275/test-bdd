@@ -20,7 +20,7 @@ def after_all(context):
     print("Suite ended")
     
     # subprocess.run("set path=D:\\Softwares\\allure-2.32.0\\bin", shell=True)
-    subprocess.run("D:\\Softwares\\allure-2.32.0\\bin\\allure generate --single-file --clean ./reports", shell=True)
+    subprocess.run("allure generate --single-file --clean ./reports", shell=True)
     
     # Example usage
     send_email_with_attachment(

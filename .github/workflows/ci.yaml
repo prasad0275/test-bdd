@@ -27,6 +27,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # Step 5: Install Allure Commandline
+      - name: Install Allure Commandline
+        run: |
+          curl -o allure-commandline.zip -L https://github.com/allure-framework/allure2/releases/download/2.15.0/allure-2.15.0.zip
+          unzip allure-commandline.zip -d /opt/allure
+          sudo ln -s /opt/allure/allure-2.15.0/bin/allure /usr/local/bin/allure  # Create a symlink to the allure command
+
       # Step 4: Run Behave tests
       - name: Run Behave tests
         run: |
