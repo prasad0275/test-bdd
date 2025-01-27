@@ -1,11 +1,14 @@
 from behave import given, when, then
 from selenium.webdriver import Chrome
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 import time
 
 @given(u'user is on the login page')
 def step_impl(context):
-    context.driver = Chrome()
+    options = Options()
+    options.add_argument('--headless=new')
+    context.driver = Chrome(options=options)
     context.driver.get("https://www.saucedemo.com/")
 
 
