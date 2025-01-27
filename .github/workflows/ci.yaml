@@ -27,7 +27,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      Step 5: Install Allure Commandline
+      # Step 5: Install Allure Commandline
       - name: Install Allure Commandline
         run: |
           curl -o allure-commandline.zip -L https://github.com/allure-framework/allure2/releases/download/2.15.0/allure-2.15.0.zip
