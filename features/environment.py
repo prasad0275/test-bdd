@@ -21,11 +21,12 @@ def before_all(context):
 
 def after_all(context):
     print("Suite ended")
-    try:    
+    try:
+        subprocess.run("allure --version", shell=True)
         # subprocess.run("set path=D:\\Softwares\\allure-2.32.0\\bin", shell=True)
-        subprocess.run("/opt/allure/allure-2.15.0/bin/allure generate --single-file --clean ./reports", shell=True, check=True)
+        subprocess.run("allure generate --single-file --clean ./reports", shell=True, check=True)
         print("Allure report generated successfully!")
-            
+        
         # Example usage
         send_email_with_attachment(
             "Testing BDD",
@@ -41,7 +42,7 @@ def after_all(context):
 def send_email_with_attachment(subject, body, to_email, file_path):
     # Your email details
     from_email = "sawant.prasad0275@gmail.com"
-    password = "wzqw cnrx ocij gnai"
+    password = "ayvv ubax dcff dhfc"
 
     # Set up the server
     server = smtplib.SMTP('smtp.gmail.com', 587)
