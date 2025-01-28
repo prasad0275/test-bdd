@@ -5,7 +5,8 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
-
+from dotenv import load_dotenv
+load_dotenv()
 
 def before_all(context):
     pass
@@ -42,7 +43,7 @@ def after_all(context):
 def send_email_with_attachment(subject, body, to_email, file_path):
     # Your email details
     from_email = "sawant.prasad0275@gmail.com"
-    password = "ayvv ubax dcff dhfc"
+    password = os.getenv('GPWD')
 
     # Set up the server
     server = smtplib.SMTP('smtp.gmail.com', 587)
