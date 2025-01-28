@@ -29,13 +29,13 @@ jobs:
 
       - name: Install Java from open-jdk
         run: |
-          apt-get install -y openjdk-11-jdk wget unzip
+          sudo apt-get install -y openjdk-11-jdk wget unzip
           
       # Step: Install Allure Commandline
       - name: Install Allure Commandline
         run: |
-          wget https://github.com/allure-framework/allure2/releases/download/2.32.0/allure-2.32.0.zip
-          unzip allure-2.32.0.zip -d /opt/allure
+          sudo wget https://github.com/allure-framework/allure2/releases/download/2.32.0/allure-2.32.0.zip
+          sudo unzip allure-2.32.0.zip -d /opt/allure
           sudo ln -s /opt/allure/allure-2.32.0/bin/allure /usr/bin/allure  # Create a symlink to the allure command
 
       # Step 4: Run Behave tests
