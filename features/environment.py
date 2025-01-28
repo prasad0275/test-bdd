@@ -45,7 +45,7 @@ def after_all(context):
 def send_email_with_attachment(subject, body, to_email, file_path):
     # Your email details
     from_email = "sawant.prasad0275@gmail.com"
-    password = os.getenv('GPWD')
+    password = "rrdmvbypakegcdbg"
 
     # Set up the server
     server = smtplib.SMTP('smtp.gmail.com', 587)
