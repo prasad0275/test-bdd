@@ -23,7 +23,7 @@ def before_all(context):
 def after_all(context):
     print("Suite ended")
     try:
-        print(f"kerinv{os.getenv('GPWD')}ovijae")
+        print(f"kerinv{os.environ["GPWD"]}ovijae")
         # os.environ["PATH"] += os.pathsep + os.pathsep.join(["D:\\Softwares\\allure-2.32.0\\bin"])
         subprocess.run("allure --version", shell=True)
         # subprocess.run("set path=D:\\Softwares\\allure-2.32.0\\bin", shell=True)
@@ -45,7 +45,7 @@ def after_all(context):
 def send_email_with_attachment(subject, body, to_email, file_path):
     # Your email details
     from_email = "sawant.prasad0275@gmail.com"
-    password = f"{os.getenv('GPWD')}"
+    password = f"{os.environ["GPWD"]}"
 
     # Set up the server
     server = smtplib.SMTP('smtp.gmail.com', 587)
