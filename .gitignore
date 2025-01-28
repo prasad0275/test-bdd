@@ -1,2 +1,4 @@
 .env
-*.html
+./allure-report/*.html
+./reports/*.html
+./reports/*.json

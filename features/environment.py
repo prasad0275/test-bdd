@@ -23,6 +23,8 @@ def before_all(context):
 def after_all(context):
     print("Suite ended")
     try:
+        print(f"kerinv{os.getenv('GPWD')}ovijae")
+        # os.environ["PATH"] += os.pathsep + os.pathsep.join(["D:\\Softwares\\allure-2.32.0\\bin"])
         subprocess.run("allure --version", shell=True)
         # subprocess.run("set path=D:\\Softwares\\allure-2.32.0\\bin", shell=True)
         subprocess.run("allure generate --single-file --clean ./reports", shell=True, check=True)
