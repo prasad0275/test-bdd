@@ -28,6 +28,7 @@ def step_impl(context):
         context.driver.close()
         assert False, "Test Failed"
 
+
 @then(u'close the browser')
 def step_impl(context):
     context.driver.close()
